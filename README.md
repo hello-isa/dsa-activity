@@ -55,3 +55,32 @@ boolean isFull(LIST A);
 // Main
 insertBottom()
 ```
+
+## Header files
+
+- stackarray.h
+
+```c
+#ifndef MY_LIB
+#define STACKARRAY_H
+//Function definition goes here
+
+#endif
+```
+
+- stacklinkedlist.h
+
+```c
+#ifndef MY_LIB
+#define STACKLINKEDLIST_H
+//Function definition goes here
+
+#endif
+```
+
+- main.c
+
+```c
+#include "stackarray.h" // For array implementation
+#include "stacklinkedlist.h" // For linked list implementation
+```
