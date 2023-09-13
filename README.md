@@ -39,7 +39,7 @@ void initialize(STACK *A);
 void display(STACK A);
 void push(STACK *A, char newElem);
 void pop(STACK *A);
-void top(STACK A);
+int top(STACK A);
 boolean isEmpty(STACK A);
 boolean isFull(STACK A);
 
@@ -48,7 +48,7 @@ void initialize(LIST *A);
 void display(LIST A);
 void push(LIST *A, char newElem);
 void pop(LIST *A);
-void top(LIST A);
+int top(LIST A);
 boolean isEmpty(LIST A);
 boolean isFull(LIST A);
 
