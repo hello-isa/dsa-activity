@@ -35,7 +35,7 @@ typedef enum{
 } boolean;
 
 // Array implementation
-void initialize(STACK A);
+void initialize(STACK *A);
 void display(STACK A);
 void push(STACK *A, char newElem);
 void pop(STACK *A);
@@ -44,7 +44,7 @@ boolean isEmpty(STACK A);
 boolean isFull(STACK A);
 
 // Linked list implementation
-void initialize(LIST A);
+void initialize(LIST *A);
 void display(LIST A);
 void push(LIST *A, char newElem);
 void pop(LIST *A);
