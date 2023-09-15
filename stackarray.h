@@ -1,14 +1,12 @@
 #ifndef MY_LIB
 #define STACKARRAY_H
 // Function definition goes here
-#ifndef stacklib
 #include <stdio.h>
-#define stacklib
 #define MAX 5
 
 typedef struct {
     char elem[MAX];
-    int TopList;
+    int top;
 }STACK;
 typedef enum {F , T}Boolean;
 
@@ -25,7 +23,7 @@ void InsertBottom(STACK *A , char Data);
 
 void Display(STACK A){ 
     int x;
-    for(x = A.TopList;x < MAX ; x++ ){
+    for(x = A.top;x < MAX ; x++ ){
         printf("%c\n" , A.elem[x]);
     }
 
@@ -53,33 +51,30 @@ void insertBottom(STACK *original , char elem){
 }
 
 void initialize(STACK *A){
-    A->TopList = MAX;
+    A->top = MAX;
 }
-void push(STACK *A ,char elem){
+void push(STACK *A ,char newElem){
 
     if(!isFull(*A)){
-        A->elem[--A->TopList] = elem;
+        A->elem[--A->top] =  newElem;
     }
 }
 void pop(STACK *A){
     if(!isEmpty(*A)){ // if there is nothing to delete
-        A->TopList++;
+        A->top++;
     }
 }
 int top(STACK A){
-    return A.TopList;
+    return A.top;
 }
 Boolean isEmpty(STACK A){
-    Boolean Ret = A.TopList == MAX ? T:F;
+    Boolean Ret = A.top == MAX ? T:F;
     return Ret;
 }
 Boolean isFull(STACK A){
-    Boolean Ret = A.TopList == -1 ? T:F;
+    Boolean Ret = A.top == -1 ? T:F;
     return Ret;
 }
-
-
-#endif
 
 
 #endif
