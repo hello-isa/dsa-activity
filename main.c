@@ -9,7 +9,7 @@
 int main()
 {
     // Declare a stack using the LIST type defined in the header file
-    LIST stack;
+    STACK stack;
     // Initialize the stack
     initialize(&stack);
 
