@@ -84,3 +84,27 @@ insertBottom()
 #include "stackarray.h" // For array implementation
 #include "stacklinkedlist.h" // For linked list implementation
 ```
+
+# How to run and compile the .h and .c files
+
+- Make sure you have both the .h and .c files in the same directory.
+- Open the command prompt with the correct file path.
+- If you have the GCC compiler installed, you can compile the program with this command:
+
+```console
+gcc main.c -o my_stack_program
+./my_stack_program
+```
+
+If an error appears saying:
+
+```console
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+```
+
+Run the executable:
+
+```console
+my_stack_program.exe
+```
