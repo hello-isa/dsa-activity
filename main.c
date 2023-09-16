@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 // Comment out either the array or linked list to see
-#include "stackarray.h" // For array implementation
-// #include "stacklinkedlist.h" // For linked list implementation
+// #include "stackarray.h" // For array implementation
+#include "stacklinkedlist.h" // For linked list implementation
 
 int main()
 {
