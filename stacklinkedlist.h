@@ -12,34 +12,34 @@ typedef struct node
 {
 	char data;
 	struct node *link;
-} *LIST;
+} *STACK;
 
-void initialize(LIST *A);
-void display(LIST A);
-void push(LIST *A, char newElem);
-void pop(LIST *A);
-int top(LIST A);
-boolean isEmpty(LIST A);
-boolean isFull(LIST A);
+void initialize(STACK *A);
+void display(STACK A);
+void push(STACK *A, char newElem);
+void pop(STACK *A);
+int top(STACK A);
+boolean isEmpty(STACK A);
+boolean isFull(STACK A);
 
-void initialize(LIST *A)
+void initialize(STACK *A)
 {
 	*A = NULL;
 }
 
-void display(LIST A)
+void display(STACK A)
 {
-	LIST temp;
+	STACK temp;
 	for (temp = A; temp != NULL; temp = temp->link)
 	{
 		printf("[%c]->", temp->data);
 	}
 }
 
-void push(LIST *A, char newElem)
+void push(STACK *A, char newElem)
 {
-	LIST newNode;
-	newNode = (LIST)malloc(sizeof(struct node));
+	STACK newNode;
+	newNode = (STACK)malloc(sizeof(struct node));
 	if (newNode == NULL)
 	{
 		printf("Allocation Failed!");
@@ -61,27 +61,27 @@ void push(LIST *A, char newElem)
 	}
 }
 
-void pop(LIST *A)
+void pop(STACK *A)
 {
-	LIST temp;
+	STACK temp;
 	temp = *A;
 	*A = (*A)->link;
 	free(temp);
 }
 
-int top(LIST A)
+int top(STACK A)
 {
 	int topVal;
 }
 
-boolean isEmpty(LIST A)
+boolean isEmpty(STACK A)
 {
 	return (A == NULL) ? T : F;
 }
 
-boolean isFull(LIST A)
+boolean isFull(STACK A)
 {
-	LIST newNode = (LIST)malloc(sizeof(struct node));
+	STACK newNode = (STACK)malloc(sizeof(struct node));
 
 	// Check if memory allocation is successful
 	if (newNode != NULL)
