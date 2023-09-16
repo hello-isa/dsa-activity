@@ -1,14 +1,17 @@
 #ifndef MY_LIB
 #define STACKLINKEDLIST_H
 // Function definition goes here
-typedef enum{
-    F, T
+typedef enum
+{
+	F,
+	T
 } boolean;
 
-typedef struct node{
+typedef struct node
+{
 	char data;
-	struct node* link;
-}*LIST;
+	struct node *link;
+} *LIST;
 
 void initialize(LIST *A);
 void display(LIST A);
@@ -18,55 +21,63 @@ int top(LIST A);
 boolean isEmpty(LIST A);
 boolean isFull(LIST A);
 
-void initialize(LIST *A){
+void initialize(LIST *A)
+{
 	*A = NULL;
 }
 
-void display(LIST A){
+void display(LIST A)
+{
 	LIST temp;
-	for(temp = A; temp != NULL; temp = temp->link){
+	for (temp = A; temp != NULL; temp = temp->link)
+	{
 		printf("[%c]->", temp->data);
 	}
 }
 
-void push(LIST *A, char newElem){
+void push(LIST *A, char newElem)
+{
 	LIST newNode;
 	newNode = (LIST)malloc(sizeof(struct node));
-	if(newNode == NULL){
+	if (newNode == NULL)
+	{
 		printf("Allocation Failed!");
 	}
-	else{
-		if(*A == NULL){
+	else
+	{
+		if (*A == NULL)
+		{
 			newNode->data = newElem;
 			newNode->link = NULL;
 			*A = newNode;
 		}
-		else{
+		else
+		{
 			newNode->data = newElem;
 			newNode->link = *A;
 			*A = newNode;
 		}
 	}
-
 }
 
-void pop(LIST *A){
+void pop(LIST *A)
+{
 	LIST temp;
 	temp = *A;
 	*A = (*A)->link;
 	free(temp);
 }
 
-int top(LIST A){
+int top(LIST A)
+{
 	int topVal;
-	
 }
 
-boolean isEmpty(LIST A){
-	
+boolean isEmpty(LIST A)
+{
 }
 
-boolean isFull(LIST A){
-	
+boolean isFull(LIST A)
+{
 }
 #endif
