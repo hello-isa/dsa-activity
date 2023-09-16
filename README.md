@@ -61,7 +61,7 @@ insertBottom()
 - stackarray.h
 
 ```c
-#ifndef MY_LIB
+#ifndef STACKARRAY_H
 #define STACKARRAY_H
 //Function definition goes here
 
@@ -71,7 +71,7 @@ insertBottom()
 - stacklinkedlist.h
 
 ```c
-#ifndef MY_LIB
+#ifndef STACKLINKEDLIST_H
 #define STACKLINKEDLIST_H
 //Function definition goes here
 
