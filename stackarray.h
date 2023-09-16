@@ -1,4 +1,4 @@
-#ifndef MY_LIB
+#ifndef STACKARRAY_H
 #define STACKARRAY_H
 
 // Function definition goes here

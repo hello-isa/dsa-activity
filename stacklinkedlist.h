@@ -1,4 +1,4 @@
-#ifndef MY_LIB
+#ifndef STACKLINKEDLIST_H
 #define STACKLINKEDLIST_H
 
 // Function definition goes here
@@ -76,6 +76,14 @@ int top(LIST A)
 
 boolean isEmpty(LIST A)
 {
+	if (A == NULL)
+	{
+		return T;
+	}
+	else
+	{
+		return F;
+	}
 }
 
 boolean isFull(LIST A)
