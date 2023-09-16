@@ -24,7 +24,7 @@ typedef struct node
 {
    char elem;
    struct node *link;
-} *LIST;
+} *STACK;
 ```
 
 ## Function prototypes
@@ -44,13 +44,13 @@ boolean isEmpty(STACK A);
 boolean isFull(STACK A);
 
 // Linked list implementation
-void initialize(LIST *A);
-void display(LIST A);
-void push(LIST *A, char newElem);
-void pop(LIST *A);
-int top(LIST A);
-boolean isEmpty(LIST A);
-boolean isFull(LIST A);
+void initialize(STACK *A);
+void display(STACK A);
+void push(STACK *A, char newElem);
+void pop(STACK *A);
+int top(STACK A);
+boolean isEmpty(STACK A);
+boolean isFull(STACK A);
 
 // Main
 insertBottom()
