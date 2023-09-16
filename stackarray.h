@@ -1,5 +1,6 @@
 #ifndef MY_LIB
 #define STACKARRAY_H
+
 // Function definition goes here
 #include <stdio.h>
 #define MAX 5
@@ -9,6 +10,7 @@ typedef struct
     char elem[MAX];
     int top;
 } STACK;
+
 typedef enum
 {
     F,
