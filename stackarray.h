@@ -3,8 +3,7 @@
 
 // Function definition goes here
 #include <stdio.h>
-#define MAX 5
-
+#define MAX
 typedef struct
 {
     char elem[MAX];

@@ -76,17 +76,24 @@ int top(LIST A)
 
 boolean isEmpty(LIST A)
 {
-	if (A == NULL)
-	{
-		return T;
-	}
-	else
-	{
-		return F;
-	}
+	return (A == NULL) ? T : F;
 }
 
 boolean isFull(LIST A)
 {
+	LIST newNode = (LIST)malloc(sizeof(struct node));
+
+	// Check if memory allocation is successful
+	if (newNode != NULL)
+	{
+		// Memory was successfully allocated, list not full
+		free(newNode); // Deallocate the memory to avoid memory leaks
+		return F;
+	}
+	else
+	{
+		// Memory allocation failed, list is full
+		return T;
+	}
 }
 #endif
