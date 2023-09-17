@@ -46,19 +46,20 @@ int main()
     // Get the top element of the stack
 
     /*Printing for Linkedlist
-    */
+     */
     STACK topElement = top(stack);
-    if(topElement != NULL)
+    if (topElement != NULL)
     {
         printf("Top element of the stack: %c\n", topElement->data);
-
-    }else{
+    }
+    else
+    {
         printf("Stack is empty. Cannot retrieve top element.\n");
     }
 
-     /*Printing for Array*/
+    /*Printing for Array*/
 
-    // int topElement = top(stack);    
+    // int topElement = top(stack);
     // if (topElement != -1)
     // {
     //     // printf("Top element of the stack: %c\n", stack.data[topElement]);
@@ -69,6 +70,7 @@ int main()
     // {
     //     printf("Stack is empty. Cannot retrieve top element.\n");
     // }
+
     // Pop elements from the stack
     pop(&stack);
     pop(&stack);
