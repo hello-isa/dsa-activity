@@ -93,6 +93,9 @@ insertBottom()
 
 ```console
 gcc main.c -o my_stack_program
+```
+
+```console
 ./my_stack_program
 ```
 
