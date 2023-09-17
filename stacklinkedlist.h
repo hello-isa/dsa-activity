@@ -18,7 +18,7 @@ void initialize(STACK *A);
 void display(STACK A);
 void push(STACK *A, char newElem);
 void pop(STACK *A);
-int top(STACK A);
+int top(STACK *A);
 boolean isEmpty(STACK A);
 boolean isFull(STACK A);
 
@@ -69,9 +69,10 @@ void pop(STACK *A)
 	free(temp);
 }
 
-int top(STACK A)
-{
-	int topVal;
+int top(STACK *A) {
+    uintptr_t topVal;
+    topVal = (uintptr_t)(*A);
+    return (int)topVal; 
 }
 
 boolean isEmpty(STACK A)
