@@ -69,9 +69,9 @@ void pop(STACK *A)
 	free(temp);
 }
 
-int top(STACK A)
+STACK top(STACK A)
 {
-	int topVal;
+	return A;
 }
 
 boolean isEmpty(STACK A)

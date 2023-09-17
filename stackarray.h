@@ -5,7 +5,7 @@
 #define MAX 5
 typedef struct
 {
-    char elem[MAX];
+    char data[MAX];
     int top;
 } STACK;
 
@@ -30,7 +30,7 @@ void display(STACK A)
     int x;
     for (x = A.top; x < MAX; x++)
     {
-        printf("%c\n", A.elem[x]);
+        printf("%c\n", A.data[x]);
     }
 }
 
@@ -45,14 +45,14 @@ void insertBottom(STACK *original, char elem)
     // Loop to transfer All Existing in the Original List to a temp to insert elem to Last
     for (Topndx = top(*original); Topndx != MAX; Topndx = top(*original))
     {
-        push(&templist, original->elem[Topndx]);
+        push(&templist, original->data[Topndx]);
         pop(original);
     }
     push(original, elem);
 
     for (Topndx = top(templist); Topndx != MAX; Topndx = top(templist))
     {
-        push(original, templist.elem[Topndx]);
+        push(original, templist.data[Topndx]);
         pop(&templist);
     }
 }
@@ -66,7 +66,7 @@ void push(STACK *A, char newElem)
 
     if (!isFull(*A))
     {
-        A->elem[--A->top] = newElem;
+        A->data[--A->top] = newElem;
     }
 }
 void pop(STACK *A)

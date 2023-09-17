@@ -44,10 +44,13 @@ int main()
     }
 
     // Get the top element of the stack
-    int topElement = top(stack);
+    // int topElement = top(stack);
+    STACK topElement = top(stack);
     if (topElement != -1)
     {
-        printf("Top element of the stack: %c\n", (char)topElement);
+        // printf("Top element of the stack: %c\n", stack.data[topElement]);
+        printf("Top element of the stack: %c\n", topElement->data);
+
     }
     else
     {
