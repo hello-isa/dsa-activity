@@ -18,7 +18,7 @@ void initialize(STACK *A);
 void display(STACK A);
 void push(STACK *A, char newElem);
 void pop(STACK *A);
-STACK top(STACK *A);
+STACK top(STACK A);
 boolean isEmpty(STACK A);
 boolean isFull(STACK A);
 
